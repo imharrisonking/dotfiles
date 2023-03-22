@@ -7,12 +7,19 @@
       "alignment": "left",
       "segments": [
         {
+            "foreground": "#E4E4E4",
+            "background": "#306998",
+            "leading_diamond": "\u256d\u2500\ue0b6",
+            "style": "diamond",
+            "template": "{{ .Name }} ",
+            "type": "shell"
+        },
+        {
           "type": "path",
-          "style": "diamond",
+          "style": "powerline",
           "powerline_symbol": "\ue0b0",
           "foreground": "#E4E4E4",
           "background": "#444444",
-          "leading_diamond": "\u256d\u2500\ue0b6",
           "template": " {{ .Path }} ",
           "properties": {
             "style": "full"
@@ -43,6 +50,21 @@
       "type": "prompt",
       "alignment": "right",
       "segments": [
+        {
+            "type": "python",
+            "foreground": "#E4E4E4",
+            "background": "#306998",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "properties": {
+              "fetch_virtual_env": true,
+              "display_virtual_env": true,
+              "display_mode": "files",
+              "fetch_version": false
+            },
+            "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 "
+        },
         {
           "type": "node",
           "style": "diamond",
