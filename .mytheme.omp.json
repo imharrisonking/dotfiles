@@ -7,6 +7,12 @@
         "alignment": "left",
         "segments": [
             {
+                "foreground": "#98C379",
+                "style": "plain",
+                "template": "{{ .UserName }}@{{ .HostName }} ",
+                "type": "session"
+            },
+            {
             "type": "path",
             "style": "plain",
             "foreground": "#E4E4E4",
